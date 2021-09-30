@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Test</title>
+    <h3>Extended block</h3>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <span>This is a body</span>
+    <div class="content" >
+        <h1 class="head">Task Master</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Add</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="http://">Update</a>
+                    <br>
+                    <a href="http://">Delete</a>
+                </td>
+            </tr>
+        </table>
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>
